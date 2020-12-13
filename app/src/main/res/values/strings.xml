@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Calculator</string>
+
+    <string name="button0Val">0</string>
+    <string name="button1Val">1</string>
+    <string name="button2Val">2</string>
+    <string name="button3Val">3</string>
+    <string name="button4Val">4</string>
+    <string name="button5Val">5</string>
+    <string name="button6Val">6</string>
+    <string name="button7Val">7</string>
+    <string name="button8Val">8</string>
+    <string name="button9Val">9</string>
+    <string name="buttonDecVal">.</string>
+    <string name="buttonEqVal">=</string>
 </resources>
