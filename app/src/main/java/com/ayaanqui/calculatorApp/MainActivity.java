@@ -37,18 +37,18 @@ public class MainActivity extends AppCompatActivity {
             });
         } else if (value.equals("del")) {
             b.setOnClickListener(e -> {
-                if (query.charAt(query.length() - 1) == ')')
-                    parenthOpen = true;
+                if (query.length() > 0) {
+                    if (query.charAt(query.length() - 1) == ')')
+                        parenthOpen = true;
 
-                try {
                     query.deleteCharAt(query.length() - 1);
-                } catch (Exception err) {}
+                    
+                    if (query.length() < 1)
+                        parenthOpen = false;
 
-                if (query.length() < 1)
-                    parenthOpen = false;
-
-                expressionTextView.setText(query.toString());
-                errorsTextView.setText("");
+                    expressionTextView.setText(query.toString());
+                    errorsTextView.setText("");
+                }
             });
         } else if (value.equals("ac")) {
             b.setOnClickListener(e -> {
