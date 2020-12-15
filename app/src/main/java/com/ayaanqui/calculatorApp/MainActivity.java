@@ -36,10 +36,19 @@ public class MainActivity extends AppCompatActivity {
             });
         } else if (value.equals("del")) {
             b.setOnClickListener(e -> {
-                expressionTextView.setText("");
+                try {
+                    query.deleteCharAt(query.length() - 1);
+                } catch (Exception err) {}
+
+                expressionTextView.setText(query.toString());
                 errorsTextView.setText("");
+            });
+        } else if (value.equals("ac")) {
+            b.setOnClickListener(e -> {
+                expressionTextView.setText("");
                 resultTextView.setText("0");
                 query = new StringBuilder();
+                errorsTextView.setText("");
             });
         } else {
             b.setOnClickListener(e -> {
@@ -78,5 +87,6 @@ public class MainActivity extends AppCompatActivity {
         setOnClick(R.id.buttonDec, ".");
         setOnClick(R.id.buttonEq, "=");
         setOnClick(R.id.buttonDel, "del");
+        setOnClick(R.id.buttonAc, "ac");
     }
 }
