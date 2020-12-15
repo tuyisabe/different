@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
                     resultTextView.setText(newQuery);
                     expressionTextView.setText(newQuery);
                     query = new StringBuilder(newQuery);
+                    errorsTextView.setText("");
                 } else {
                     errorsTextView.setText(res.errors[0]);
                     resultTextView.setText("Error");
