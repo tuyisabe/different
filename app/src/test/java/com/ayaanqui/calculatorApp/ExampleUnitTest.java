@@ -1,4 +1,4 @@
-package com.ayaanqui.calculator;
+package com.ayaanqui.calculatorApp;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.ayaanqui.calculator;
+package com.ayaanqui.calculatorApp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,18 +6,36 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.github.ayaanqui.ExpressionResolver.Expression;
+
 public class MainActivity extends AppCompatActivity {
     StringBuilder query = new StringBuilder();
-
-    Calculator c = new Calculator();
+    Expression calc = new Expression();
 
     private void setOnClick(int id, String value) {
         final Button b = findViewById(id);
         final TextView expressionTextView = findViewById(R.id.expressionTextView);
-        b.setOnClickListener(e -> {
-            query.append(value);
-            expressionTextView.setText(query);
-        });
+        final TextView resultTextView = findViewById(R.id.resultTextView);
+
+        if (value.equals("=")) {
+            b.setOnClickListener(e -> {
+                calc.setExpression(query.toString());
+                expressionTextView.setText("");
+                resultTextView.setText(Double.toString(calc.solveExpression().result));
+                query = new StringBuilder();
+            });
+        } else if (value.equals("del")) {
+            b.setOnClickListener(e -> {
+                expressionTextView.setText("");
+                resultTextView.setText("0");
+                query = new StringBuilder();
+            });
+        } else {
+            b.setOnClickListener(e -> {
+                query.append(value);
+                expressionTextView.setText(query);
+            });
+        }
     }
 
     @Override
