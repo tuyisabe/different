@@ -78,7 +78,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="#00FFFFFF"
+                        android:background="?android:attr/selectableItemBackground"
                         android:text="AC"
                         android:textColor="#D3D3D3"
                         android:textSize="24sp" />
@@ -88,7 +88,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="#00FFFFFF"
+                        android:background="?android:attr/selectableItemBackground"
                         android:text="DEL"
                         android:textColor="#D3D3D3"
                         android:textSize="24sp" />
@@ -98,7 +98,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="#00FFFFFF"
+                        android:background="?android:attr/selectableItemBackground"
                         android:text="%"
                         android:textColor="#D3D3D3"
                         android:textSize="24sp" />
@@ -116,7 +116,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="#00FFFFFF"
+                        android:background="?android:attr/selectableItemBackground"
                         android:text="@string/button7Val"
                         android:textColor="#D3D3D3"
                         android:textSize="24sp" />
@@ -126,7 +126,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="#00FFFFFF"
+                        android:background="?android:attr/selectableItemBackground"
                         android:text="@string/button8Val"
                         android:textColor="#D3D3D3"
                         android:textSize="24sp" />
@@ -136,7 +136,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="#00FFFFFF"
+                        android:background="?android:attr/selectableItemBackground"
                         android:text="@string/button9Val"
                         android:textColor="#D3D3D3"
                         android:textSize="24sp" />
@@ -154,7 +154,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="#00FFFFFF"
+                        android:background="?android:attr/selectableItemBackground"
                         android:text="@string/button4Val"
                         android:textColor="#D3D3D3"
                         android:textSize="24sp" />
@@ -164,7 +164,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="#00FFFFFF"
+                        android:background="?android:attr/selectableItemBackground"
                         android:text="@string/button5Val"
                         android:textColor="#D3D3D3"
                         android:textSize="24sp" />
@@ -174,7 +174,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="#00FFFFFF"
+                        android:background="?android:attr/selectableItemBackground"
                         android:text="@string/button6Val"
                         android:textColor="#D3D3D3"
                         android:textSize="24sp" />
@@ -192,7 +192,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="#00FFFFFF"
+                        android:background="?android:attr/selectableItemBackground"
                         android:text="@string/button1Val"
                         android:textColor="#D3D3D3"
                         android:textSize="24sp" />
@@ -202,7 +202,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="#00FFFFFF"
+                        android:background="?android:attr/selectableItemBackground"
                         android:text="@string/button2Val"
                         android:textColor="#D3D3D3"
                         android:textSize="24sp" />
@@ -212,7 +212,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="#00FFFFFF"
+                        android:background="?android:attr/selectableItemBackground"
                         android:text="@string/button3Val"
                         android:textColor="#D3D3D3"
                         android:textSize="24sp" />
@@ -230,7 +230,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="#00FFFFFF"
+                        android:background="?android:attr/selectableItemBackground"
                         android:text="@string/buttonDecVal"
                         android:textColor="#D3D3D3"
                         android:textSize="24sp" />
@@ -240,7 +240,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="#00FFFFFF"
+                        android:background="?android:attr/selectableItemBackground"
                         android:text="@string/button0Val"
                         android:textColor="#D3D3D3"
                         android:textSize="24sp" />
@@ -250,7 +250,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="#00FFFFFF"
+                        android:background="?android:attr/selectableItemBackground"
                         android:text="( )"
                         android:textColor="#D3D3D3"
                         android:textSize="24sp" />
@@ -271,7 +271,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="#00FFFFFF"
+                    android:background="?android:attr/selectableItemBackground"
                     android:text="+"
                     android:textColor="#D3D3D3"
                     android:textSize="24sp" />
@@ -281,7 +281,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="#00FFFFFF"
+                    android:background="?android:attr/selectableItemBackground"
                     android:text="-"
                     android:textColor="#D3D3D3"
                     android:textSize="24sp" />
@@ -291,7 +291,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="#00FFFFFF"
+                    android:background="?android:attr/selectableItemBackground"
                     android:text="*"
                     android:textColor="#D3D3D3"
                     android:textSize="24sp" />
@@ -301,7 +301,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="#00FFFFFF"
+                    android:background="?android:attr/selectableItemBackground"
                     android:text="/"
                     android:textColor="#D3D3D3"
                     android:textSize="24sp" />
@@ -311,7 +311,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="#0067E3"
+                    android:background="?android:attr/selectableItemBackground"
                     android:text="@string/buttonEqVal"
                     android:textColor="#D3D3D3"
                     android:textSize="24sp" />
