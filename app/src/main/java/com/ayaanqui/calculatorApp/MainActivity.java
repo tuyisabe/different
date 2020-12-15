@@ -7,26 +7,36 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.github.ayaanqui.ExpressionResolver.Expression;
+import com.github.ayaanqui.ExpressionResolver.objects.Response;
 
 public class MainActivity extends AppCompatActivity {
-    StringBuilder query = new StringBuilder();
-    Expression calc = new Expression();
+    private StringBuilder query = new StringBuilder();
+    private Expression calc = new Expression();
+    private Response res;
+    private TextView expressionTextView, resultTextView, errorsTextView;
 
     private void setOnClick(int id, String value) {
         final Button b = findViewById(id);
-        final TextView expressionTextView = findViewById(R.id.expressionTextView);
-        final TextView resultTextView = findViewById(R.id.resultTextView);
 
         if (value.equals("=")) {
             b.setOnClickListener(e -> {
                 calc.setExpression(query.toString());
-                expressionTextView.setText("");
-                resultTextView.setText(Double.toString(calc.solveExpression().result));
-                query = new StringBuilder();
+                res = calc.solveExpression();
+
+                if (res.success) {
+                    String newQuery = Double.toString(res.result);
+                    resultTextView.setText(newQuery);
+                    expressionTextView.setText(newQuery);
+                    query = new StringBuilder(newQuery);
+                } else {
+                    errorsTextView.setText(res.errors[0]);
+                    resultTextView.setText("Error");
+                }
             });
         } else if (value.equals("del")) {
             b.setOnClickListener(e -> {
                 expressionTextView.setText("");
+                errorsTextView.setText("");
                 resultTextView.setText("0");
                 query = new StringBuilder();
             });
@@ -42,6 +52,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        expressionTextView = findViewById(R.id.expressionTextView);
+        resultTextView = findViewById(R.id.resultTextView);
+        errorsTextView = findViewById(R.id.errorsTextView);
 
         // Num pad buttons
         setOnClick(R.id.button0, "0");

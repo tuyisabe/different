@@ -36,11 +36,19 @@
             <TextView
                 android:id="@+id/resultTextView"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="102dp"
                 android:text="0"
                 android:textAlignment="textEnd"
                 android:textColor="#EAEAEA"
                 android:textSize="46sp" />
+
+            <TextView
+                android:id="@+id/errorsTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewEnd"
+                android:textColor="#7C2E2E"
+                android:textSize="14sp" />
         </LinearLayout>
 
         <LinearLayout
