@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     private Expression calc = new Expression();
     private Response res;
     private TextView expressionTextView, resultTextView, errorsTextView;
+    private boolean parenthOpen = false;
 
     private void setOnClick(int id, String value) {
         final Button b = findViewById(id);
@@ -36,9 +37,15 @@ public class MainActivity extends AppCompatActivity {
             });
         } else if (value.equals("del")) {
             b.setOnClickListener(e -> {
+                if (query.charAt(query.length() - 1) == ')')
+                    parenthOpen = true;
+
                 try {
                     query.deleteCharAt(query.length() - 1);
                 } catch (Exception err) {}
+
+                if (query.length() < 1)
+                    parenthOpen = false;
 
                 expressionTextView.setText(query.toString());
                 errorsTextView.setText("");
@@ -49,6 +56,18 @@ public class MainActivity extends AppCompatActivity {
                 resultTextView.setText("0");
                 query = new StringBuilder();
                 errorsTextView.setText("");
+                parenthOpen = false;
+            });
+        } else if (value.equals("parenth")) {
+            b.setOnClickListener(e -> {
+                if (!parenthOpen) {
+                    query.append("(");
+                    parenthOpen = true;
+                } else {
+                    query.append(")");
+                    parenthOpen = false;
+                }
+                expressionTextView.setText(query.toString());
             });
         } else {
             b.setOnClickListener(e -> {
@@ -88,5 +107,6 @@ public class MainActivity extends AppCompatActivity {
         setOnClick(R.id.buttonEq, "=");
         setOnClick(R.id.buttonDel, "del");
         setOnClick(R.id.buttonAc, "ac");
+        setOnClick(R.id.buttonParenth, "parenth");
     }
 }
