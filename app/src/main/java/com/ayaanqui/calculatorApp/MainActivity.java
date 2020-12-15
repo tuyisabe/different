@@ -6,12 +6,12 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.github.ayaanqui.ExpressionResolver.Expression;
+import com.github.ayaanqui.ExpressionResolver.Resolver;
 import com.github.ayaanqui.ExpressionResolver.objects.Response;
 
 public class MainActivity extends AppCompatActivity {
     private StringBuilder query = new StringBuilder();
-    private Expression calc = new Expression();
+    private Resolver calc = new Resolver();
     private Response res;
     private TextView expressionTextView, resultTextView, errorsTextView;
     private boolean parenthOpen = false;
