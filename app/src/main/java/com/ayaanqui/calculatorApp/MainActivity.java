@@ -70,6 +70,12 @@ public class MainActivity extends AppCompatActivity {
                 }
                 expressionTextView.setText(query.toString());
             });
+        } else if (value.equals("per")) {
+            b.setOnClickListener(e -> {
+                query.append("%(");
+                parenthOpen = true;
+                expressionTextView.setText(query.toString());
+            });
         } else {
             b.setOnClickListener(e -> {
                 query.append(value);
@@ -82,6 +88,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Define percent function
+        resolver.setFunction("%", params -> params[0] / 100);
 
         expressionTextView = findViewById(R.id.expressionTextView);
         resultTextView = findViewById(R.id.resultTextView);
@@ -109,5 +118,6 @@ public class MainActivity extends AppCompatActivity {
         setOnClick(R.id.buttonDel, "del");
         setOnClick(R.id.buttonAc, "ac");
         setOnClick(R.id.buttonParenth, "parenth");
+        setOnClick(R.id.buttonPer, "per");
     }
 }
