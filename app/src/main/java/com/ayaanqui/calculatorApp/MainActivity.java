@@ -6,12 +6,12 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.github.ayaanqui.ExpressionResolver.Resolver;
-import com.github.ayaanqui.ExpressionResolver.objects.Response;
+import com.github.ayaanqui.expressionresolver.Resolver;
+import com.github.ayaanqui.expressionresolver.objects.Response;
 
 public class MainActivity extends AppCompatActivity {
     private StringBuilder query = new StringBuilder();
-    private Resolver calc = new Resolver();
+    private Resolver resolver = new Resolver();
     private Response res;
     private TextView expressionTextView, resultTextView, errorsTextView;
     private boolean parenthOpen = false;
@@ -21,8 +21,9 @@ public class MainActivity extends AppCompatActivity {
 
         if (value.equals("=")) {
             b.setOnClickListener(e -> {
-                calc.setExpression(query.toString());
-                res = calc.solveExpression();
+                res = resolver
+                        .setExpression(query.toString())
+                        .solveExpression();
 
                 if (res.success) {
                     String newQuery = Double.toString(res.result);
