@@ -132,6 +132,16 @@
                         android:textSize="24sp" />
 
                     <Button
+                        android:id="@+id/button5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:text="@string/button5Val"
+                        android:textColor="#D3D3D3"
+                        android:textSize="24sp" />
+
+                    <Button
                         android:id="@+id/button9"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -156,16 +166,6 @@
                         android:layout_weight="1"
                         android:background="?android:attr/selectableItemBackground"
                         android:text="@string/button4Val"
-                        android:textColor="#D3D3D3"
-                        android:textSize="24sp" />
-
-                    <Button
-                        android:id="@+id/button5"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:background="?android:attr/selectableItemBackground"
-                        android:text="@string/button5Val"
                         android:textColor="#D3D3D3"
                         android:textSize="24sp" />
 
